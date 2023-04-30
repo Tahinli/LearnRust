@@ -1,5 +1,5 @@
 use std::io;
-fn get_input() -> u32
+fn get_input() -> i32
     {
         loop
             {
