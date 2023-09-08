@@ -1,3 +1,4 @@
+#[derive(Debug)]
 enum Vehicle
     {
         Car,
@@ -13,8 +14,10 @@ fn main()
         let vehicle1 = Vehicle::Car;
         let vehicle2 = Vehicle::Bus;
         let vehicle3 = Vehicle::Truck;
+        let vehicle4 = Vehicle::Bicycle;
+        let vehicle5 = Vehicle::Scooter;
 
-        let vehicles = [vehicle1,vehicle2,vehicle3];
+        let vehicles = [vehicle1,vehicle2,vehicle3,vehicle4,vehicle5];
 
         for i in vehicles
             {
@@ -22,21 +25,13 @@ fn main()
                 // but less boilerplate
                 // this does not force us to cover all posibilities
                 // but it can, if you want
-                if let i == Vehicle::Car
+                if let Vehicle::Car = i
                     {
-                        println!("{} is Car", i);
-                    }
-                if let i == Vehicle::Bus
-                    {
-                        println!("{} is Bus", i);
-                    }
-                if let i == Vehicle::Truck
-                    {
-                        println!("{} is Truck", i);
+                        println!("{:#?} is Car", i);
                     }
                 else
                     {
-                        println!("{} is Another Thing", i);
+                        println!("{:#?} is Another Thing", i);
                     }
             }
     }
