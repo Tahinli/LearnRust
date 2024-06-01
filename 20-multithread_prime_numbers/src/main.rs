@@ -141,8 +141,8 @@ async fn main() {
             let thread = tokio::spawn(prime_async(math_magic * i, math_magic * (i + 1) - 1));
             threads.push(thread);
         }
-        for _ in threads {
-            tokio::join!();
+        for thread in threads {
+            let _ = tokio::join!(thread);
         }
         let time_elapsed = instant.elapsed();
         time_values_tokio_thread.push(time_elapsed);
