@@ -30,16 +30,18 @@ impl LedState {
         self
     }
 
-    fn export_values(&self) -> Vec<u16> {
+    fn export_values(&self) -> [u16; 4] {
         match self {
-            LedState::On(r, g, b) => vec![*r as u16, *g as u16, *b as u16],
+            LedState::On(r, g, b) => [*r as u16, *g as u16, *b as u16, 0],
             LedState::Blink(r, g, b, effect_time) => {
-                vec![*r as u16, *g as u16, *b as u16, *effect_time]
+                [*r as u16, *g as u16, *b as u16, *effect_time]
             }
+
             LedState::Breath(r, g, b, effect_time) => {
-                vec![*r as u16, *g as u16, *b as u16, *effect_time]
+                [*r as u16, *g as u16, *b as u16, *effect_time]
             }
-            LedState::Off => vec![],
+
+            LedState::Off => [0, 0, 0, 0],
         }
     }
 }
