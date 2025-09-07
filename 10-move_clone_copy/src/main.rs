@@ -18,8 +18,9 @@ fn main()
             println!("s3 = {}", s3);
             println!("s4 = {}", s4);
 
-        //"Copy" all data are in stack
+        //All data are in stack
         //Because size is known while compiling
+            //"Copy"
             let x = 5;
             let y = x;
             println!("x = {}", x);
