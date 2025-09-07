@@ -4,7 +4,7 @@ fn main()
         
         //mutable because we will clean it later.
             let mut s = String::from("Yellow Duck");
-        //it's not &String, it's literal thanks to slice
+        //it's not &String, it's literal reference thanks to slice
             let firts = firts_world(&s[..]);
         println!("{}", firts);
         s.clear();
