@@ -22,16 +22,16 @@ impl<T> Point<T> {
 
 // This is a struct that can take any type into it.
 // Unlike "Point" its field not have to be same type but it can also be.
-struct AnotherPoint<T, U, K> {
+struct AnotherPoint<T, U, V> {
     x_axis: T,
     y_axis: U,
-    z_axis: K,
+    z_axis: V,
 }
 
-impl<T, U, K> AnotherPoint<T, U, K> {
+impl<T, U, V> AnotherPoint<T, U, V> {
     // This creates new point based from values that is given.
     // Their types not have to be same, they can be anything
-    fn new(x_axis: T, y_axis: U, z_axis: K) -> Self {
+    fn new(x_axis: T, y_axis: U, z_axis: V) -> Self {
         AnotherPoint {
             x_axis,
             y_axis,
