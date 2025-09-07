@@ -1,6 +1,6 @@
 //We can call modules with use to bring them into scope
 
-//Call them seperately
+//Call them separately
 //use organizing_files::gift_first;
 //use organizing_files::gift_second;
 
